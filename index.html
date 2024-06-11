@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Proposal to my baby</title>
+    <style>
+        body {
+            background-color: white;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .typewriter {
+            border: 2px solid #800080; /* Dark purple border */
+            color: #FF69B4; /* Pink text color */
+            font-size: 20px;
+            padding: 10px;
+            margin-top: 20px;
+            display: inline-block;
+        }
+        .photo {
+            margin-top: 50px;
+            max-width: 80%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            cursor: pointer;
+        }
+        .options {
+            margin-top: 20px;
+        }
+        .options button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #FF69B4; /* Pink background color */
+            color: #FFFFFF; /* White text color */
+            border: 2px solid #800080; /* Dark purple border */
+            cursor: pointer;
+        }
+        .heart {
+            color: yellow;
+            font-size: 30px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Part 1 -->
+    <div id="part-1">
+        <img class="photo" src="https://media1.tenor.com/m/AdwTF5LlkdQAAAAC/love-envelope.gif" alt="Envelope">
+        <div class="options">
+            <button onclick="showMessage('part-2')">NEXT PAGE</button>
+        </div>
+    </div>
+
+    <!-- Part 2 -->
+    <div id="part-2" style="display: none;">
+        <h2 class="typewriter">A Special Message for my Baby</h2>
+        <div class="options">
+            <button onclick="showMessage('part-3')">NEXT PAGE</button>
+        </div>
+    </div>
+
+    <!-- Part 3 -->
+    <div id="part-3" style="display: none;">
+        <h3 class="typewriter">Do you want to go out with me?</h3>
+        <img class="photo" src="https://media.tenor.com/4Ijycn6xFzUAAAAi/mochi-blue-roses.gif" alt="Roses">
+        <div class="options">
+            <button onclick="showMessage('part-4')">YES</button>
+            <button onclick="showMessage('part-4')">YES</button>
+        </div>
+    </div>
+
+    <!-- Part 4 -->
+    <div id="part-4" style="display: none;">
+        <img class="photo" src="https://www.pngitem.com/pimgs/m/189-1897004_movie-ticket-png-transparent-png.png" alt="Movie Ticket">
+        <div class="options">
+            <button onclick="showMessage('part-5')">Admit two tickets</button>
+        </div>
+    </div>
+
+    <!-- Part 5 -->
+    <div id="part-5" style="display: none;">
+        <img class="photo" src="https://media.wdwnt.com/2023/11/Inside-Out-2-1200x599.jpg" alt="Inside Out 2">
+        <div class="options">
+            <button onclick="showMessage('part-6')">June 12</button>
+            <button onclick="showMessage('part-6')">June 16</button>
+        </div>
+    </div>
+
+    <!-- Part 6 -->
+    <div id="part-6" style="display: none;">
+        <h2 class="typewriter">See you there, baby!</h2>
+        <i class="heart">&hearts;</i>
+    </div>
+
+    <script>
+        function showMessage(partId) {
+            var parts = document.querySelectorAll('div[id^="part-"]');
+            parts.forEach(function(part) {
+                part.style.display = 'none';
+            });
+            document.getElementById(partId).style.display = 'block';
+        }
+    </script>
+</body>
+</html>
